@@ -1,0 +1,107 @@
+body{ 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html {
+    height: 100vh; /* set viewport constraint */
+    min-height: 100%; /* enforce height */
+}
+
+h1, h2, h3, h4 {
+	@include font-face(montserrat);
+	color: $basicColor;
+	line-height: 3em;
+	text-transform: uppercase;
+	font-weight: bold;
+  	font-size: 3em;
+  	line-height: 1em;
+    margin: 10px 0px 10px 0px;
+}
+
+p{
+	@include font-face(Open-Sans);
+	line-height: 1.7;
+	color: $basicColor;	
+}
+
+.hwpanel { 
+	@include half-screen-panel;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.left-0{
+	left: 0px;
+	z-index: 5;
+}
+
+.left-25{
+	left: 25%;
+}
+
+.left-50{
+	left: 50%;
+	z-index: 5;
+}
+
+.active-section{
+  display: block !important;
+  animation: in 900ms ease-in-out forwards;
+}
+
+/* Small screensize classes */ 
+.s-inactive{
+  animation: out 600ms ease-in-out forwards;
+  display: block;
+  left: -100% !important;
+  z-index: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,254,236,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,254,236,0.8); 
+}
+
+@media screen and (max-width: 992px) {
+  .hwpanel{ 
+    width: 100%;
+    left: 0; 
+    height: calc(100% - 50px);
+    height: -o-calc(100% - 50px); 
+    height: -webkit-calc(100% - 50px); 
+    height: -moz-calc(100% - 50px);
+  }
+  .left-0{ 
+    z-index: 10 !important; 
+   
+  }
+  .left-50{ 
+    z-index: 10 !important;
+    
+  }
+}

@@ -1,0 +1,109 @@
+
+/*
+	I took the basic button styles from : Button styling source: http://codepen.io/sazzad/pen/yNNNJG
+*/
+
+/* Global Button Styles */
+a.nav-link:link, a.nav-link:visited {
+	position: relative;
+	display: block;
+	margin: 15px auto 0;
+	padding: 14px 15px;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.nav-link:link:after, a.nav-link:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.nav-link:link:hover, a.nav-link:visited:hover {
+	color: #FFF;
+	text-shadow: none;
+}
+a.nav-link:link:hover:after, a.nav-link:visited:hover:after {
+	height: 450%;
+}
+
+a.nav-link.page-right {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid $basicColor;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+a.nav-link.page-right:hover {
+	color: $mainBackground !important;
+	background-color: transparent;
+	text-shadow: nthree;
+}
+a.nav-link.page-right:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+a.nav-link.page-right:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: red !important;
+	background: $basicColor;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+a.nav-link.page-left {
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid $basicColor;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+a.nav-link.page-left:hover {
+	color: $mainBackground !important;
+	background-color: transparent;
+	text-shadow: nfour;
+}
+a.nav-link.page-left:hover:before {
+	right: 0%;
+	left: auto;
+	width: 100%;
+}
+a.nav-link.page-left:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: $mainBackground !important;
+	background: $basicColor;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}

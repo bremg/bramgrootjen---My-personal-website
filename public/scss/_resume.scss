@@ -1,0 +1,98 @@
+#resume{
+	background-color: $resumeBackground;
+}
+
+h2{
+	text-align: center;
+}
+
+.resume-education{
+	margin-bottom: 50px;
+}
+
+// Timeline classes
+
+.pre{
+	margin-bottom:30px;
+	margin-top:50px;
+	color: $resumeTextColor;
+
+}
+
+.timeline{
+	padding:0;
+	margin:0;
+	padding-top:10px;
+	list-style:none;
+	position:relative;
+
+	&:before {
+		content: "";
+		position:absolute;
+		width:1px;
+		height:100%;
+		top:0;
+		left:0;
+		background:#C0C0C0;
+	}
+
+	> li {
+		padding-left:40px;
+		position:relative;
+		padding-bottom:60px;
+
+		&:hover{
+			&:before{
+				content: ' ';
+				position:absolute;
+				height:18px;
+				width:18px;
+				background: $resumeTextColor;
+				border-radius:50%;
+				border:solid 1px #CCC;
+				left:-9px;
+				top:0;
+			}
+		}
+
+		&:last-of-type{
+			padding-bottom:0;	
+		}
+
+		&:before{
+			content: ' ';
+			position:absolute;
+			height:18px;
+			width:18px;
+			background:#FFF;
+			border-radius:50%;
+			border:solid 1px #CCC;
+			left:-9px;
+			top:0;
+		}
+	}
+
+	strong {
+		@include font-face(Open-Sans);
+		font-size:16px;
+		color: $resumeTextColor;
+		font-weight:400;
+	}
+
+	h4 {
+		color: $resumeTextColor;
+		font-size:1em;
+		text-transform:uppercase;
+		letter-spacing:2px;
+		font-weight:600;
+		margin-top:0;
+		margin-bottom:4px;
+	}
+
+	span {
+		@include font-face(Open-Sans);
+		font-size:16px;
+		color: $resumeTextColor;
+		font-weight:500;
+	}
+}

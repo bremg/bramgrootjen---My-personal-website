@@ -1,0 +1,648 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../scss/_base.scss */
+body {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 9, ../scss/_base.scss */
+html {
+  height: 100vh;
+  /* set viewport constraint */
+  min-height: 100%;
+  /* enforce height */
+}
+
+/* line 14, ../scss/_base.scss */
+h1, h2, h3, h4 {
+  font-family: "montserrat", sans-serif;
+  color: #fffeec;
+  line-height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1em;
+  margin: 10px 0px 10px 0px;
+}
+
+/* line 25, ../scss/_base.scss */
+p {
+  font-family: "Open-Sans", sans-serif;
+  line-height: 1.7;
+  color: #fffeec;
+}
+
+/* line 31, ../scss/_base.scss */
+.hwpanel {
+  display: none;
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  position: absolute;
+  left: 25%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  transition: all 1s ease;
+}
+
+/* line 35, ../scss/_base.scss */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* line 40, ../scss/_base.scss */
+.left-0 {
+  left: 0px;
+  z-index: 5;
+}
+
+/* line 45, ../scss/_base.scss */
+.left-25 {
+  left: 25%;
+}
+
+/* line 49, ../scss/_base.scss */
+.left-50 {
+  left: 50%;
+  z-index: 5;
+}
+
+/* line 54, ../scss/_base.scss */
+.active-section {
+  display: block !important;
+  animation: in 900ms ease-in-out forwards;
+}
+
+/* Small screensize classes */
+/* line 60, ../scss/_base.scss */
+.s-inactive {
+  animation: out 600ms ease-in-out forwards;
+  display: block;
+  left: -100% !important;
+  z-index: 0;
+}
+
+/* Scrollbar */
+/* line 68, ../scss/_base.scss */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+/* line 73, ../scss/_base.scss */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+/* line 80, ../scss/_base.scss */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 254, 236, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* line 86, ../scss/_base.scss */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 254, 236, 0.8);
+}
+
+@media screen and (max-width: 992px) {
+  /* line 91, ../scss/_base.scss */
+  .hwpanel {
+    width: 100%;
+    left: 0;
+    height: calc(100% - 50px);
+    height: -o-calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+  }
+
+  /* line 99, ../scss/_base.scss */
+  .left-0 {
+    z-index: 10 !important;
+  }
+
+  /* line 103, ../scss/_base.scss */
+  .left-50 {
+    z-index: 10 !important;
+  }
+}
+/* line 1, ../scss/_navbar.scss */
+.navbar {
+  margin-bottom: 0;
+  z-index: 15;
+}
+
+/* line 8, ../scss/_navbar.scss */
+.navbar-nav li a.nav-link {
+  margin: 0;
+}
+
+/* line 1, ../scss/_main-menu.scss */
+#main-menu {
+  background-color: #373f51;
+  display: block;
+  z-index: 10;
+  text-align: center;
+}
+/* line 6, ../scss/_main-menu.scss */
+#main-menu h2 {
+  padding-bottom: 20px !important;
+  border-bottom: dotted;
+}
+
+/* line 12, ../scss/_main-menu.scss */
+.profile-avatar {
+  height: 200px;
+  margin: 30px 15px;
+}
+/* line 15, ../scss/_main-menu.scss */
+.profile-avatar img {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 23, ../scss/_main-menu.scss */
+.hwpanel-menu {
+  display: none;
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  position: absolute;
+  left: 25%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.25);
+  transition: all 1s ease;
+  display: block;
+}
+
+/* line 28, ../scss/_main-menu.scss */
+a {
+  font-family: "montserrat", sans-serif;
+}
+
+/* line 32, ../scss/_main-menu.scss */
+.social-links-tabled {
+  display: table;
+  margin: 0 auto;
+}
+/* line 35, ../scss/_main-menu.scss */
+.social-links-tabled .social-links {
+  margin-top: 20px;
+}
+/* line 37, ../scss/_main-menu.scss */
+.social-links-tabled .social-links li {
+  display: inline;
+}
+/* line 39, ../scss/_main-menu.scss */
+.social-links-tabled .social-links li a {
+  color: #fff;
+  font-size: 25px;
+}
+/* line 42, ../scss/_main-menu.scss */
+.social-links-tabled .social-links li a img {
+  width: 30px;
+  height: 30px;
+}
+
+/*
+	I took the basic button styles from : Button styling source: http://codepen.io/sazzad/pen/yNNNJG
+*/
+/* Global Button Styles */
+/* line 7, ../scss/_menu-buttons.scss */
+a.nav-link:link, a.nav-link:visited {
+  position: relative;
+  display: block;
+  margin: 15px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 27, ../scss/_menu-buttons.scss */
+a.nav-link:link:after, a.nav-link:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+}
+
+/* line 40, ../scss/_menu-buttons.scss */
+a.nav-link:link:hover, a.nav-link:visited:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 44, ../scss/_menu-buttons.scss */
+a.nav-link:link:hover:after, a.nav-link:visited:hover:after {
+  height: 450%;
+}
+
+/* line 48, ../scss/_menu-buttons.scss */
+a.nav-link.page-right {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 56, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:hover {
+  color: #373f51 !important;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+
+/* line 61, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
+/* line 66, ../scss/_menu-buttons.scss */
+a.nav-link.page-right:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  color: red !important;
+  background: #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 79, ../scss/_menu-buttons.scss */
+a.nav-link.page-left {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 87, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:hover {
+  color: #373f51 !important;
+  background-color: transparent;
+  text-shadow: nfour;
+}
+
+/* line 92, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:hover:before {
+  right: 0%;
+  left: auto;
+  width: 100%;
+}
+
+/* line 97, ../scss/_menu-buttons.scss */
+a.nav-link.page-left:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  color: #373f51 !important;
+  background: #fffeec;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 1, ../scss/_about.scss */
+#about {
+  background-color: #73bfb8;
+}
+
+/* line 1, ../scss/_skills.scss */
+#skills {
+  background-color: #6c809a;
+}
+
+/* === Skill Section === */
+/* line 10, ../scss/_skills.scss */
+.skills-section {
+  background-color: #1a1e23;
+  color: #fff;
+}
+/* line 13, ../scss/_skills.scss */
+.skills-section .section-title {
+  color: #fff;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+/* line 20, ../scss/_skills.scss */
+.skill-progress {
+  position: relative;
+}
+
+/* line 24, ../scss/_skills.scss */
+.skill-title {
+  width: 25%;
+  min-width: 85px;
+  float: left;
+}
+/* line 28, ../scss/_skills.scss */
+.skill-title h3 {
+  color: white;
+  padding-right: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: -6px;
+  text-transform: capitalize;
+}
+
+/* progress-bar */
+/* line 39, ../scss/_skills.scss */
+.progress {
+  height: 10px;
+  margin-bottom: 40px;
+  background-color: #3a4149;
+  border-radius: 3px;
+  box-shadow: none;
+  width: 75%;
+}
+/* line 46, ../scss/_skills.scss */
+.progress .progress-bar {
+  background-color: white;
+}
+/* line 48, ../scss/_skills.scss */
+.progress .progress-bar span {
+  position: absolute;
+  top: -20px;
+  right: 15px;
+}
+/* line 54, ../scss/_skills.scss */
+.progress .six-sec-ease-in-out {
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition: width 2s ease-in-out;
+}
+
+/* === Chart CSS  === */
+/* line 63, ../scss/_skills.scss */
+.skill-chart h3 {
+  margin-top: 20px;
+  color: white;
+}
+
+/* line 67, ../scss/_skills.scss */
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  margin: 35px auto;
+  text-align: center;
+}
+
+/* line 75, ../scss/_skills.scss */
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 80, ../scss/_skills.scss */
+.percent {
+  display: inline-block;
+  margin: auto;
+  line-height: 140px;
+  z-index: 2;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* line 89, ../scss/_skills.scss */
+.percent:after {
+  content: '%';
+}
+
+/* line 93, ../scss/_skills.scss */
+.chart-text h3 {
+  color: white;
+  padding-right: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+/* line 1, ../scss/_resume.scss */
+#resume {
+  background-color: #fcfcfc;
+}
+
+/* line 5, ../scss/_resume.scss */
+h2 {
+  text-align: center;
+}
+
+/* line 9, ../scss/_resume.scss */
+.resume-education {
+  margin-bottom: 50px;
+}
+
+/* line 15, ../scss/_resume.scss */
+.pre {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  color: #373f51;
+}
+
+/* line 22, ../scss/_resume.scss */
+.timeline {
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  list-style: none;
+  position: relative;
+}
+/* line 29, ../scss/_resume.scss */
+.timeline:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #C0C0C0;
+}
+/* line 39, ../scss/_resume.scss */
+.timeline > li {
+  padding-left: 40px;
+  position: relative;
+  padding-bottom: 60px;
+}
+/* line 45, ../scss/_resume.scss */
+.timeline > li:hover:before {
+  content: ' ';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background: #373f51;
+  border-radius: 50%;
+  border: solid 1px #CCC;
+  left: -9px;
+  top: 0;
+}
+/* line 58, ../scss/_resume.scss */
+.timeline > li:last-of-type {
+  padding-bottom: 0;
+}
+/* line 62, ../scss/_resume.scss */
+.timeline > li:before {
+  content: ' ';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background: #FFF;
+  border-radius: 50%;
+  border: solid 1px #CCC;
+  left: -9px;
+  top: 0;
+}
+/* line 75, ../scss/_resume.scss */
+.timeline strong {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 16px;
+  color: #373f51;
+  font-weight: 400;
+}
+/* line 82, ../scss/_resume.scss */
+.timeline h4 {
+  color: #373f51;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+/* line 92, ../scss/_resume.scss */
+.timeline span {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 16px;
+  color: #373f51;
+  font-weight: 500;
+}
+
+/* line 1, ../scss/_contact.scss */
+#contact {
+  background-color: #ffe1a8;
+  padding-top: 70px;
+}
+/* line 5, ../scss/_contact.scss */
+#contact p {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 16px;
+  color: #373f51;
+  font-weight: 600;
+}

@@ -1,0 +1,11 @@
+#contact{
+	background-color: $contactBackground;
+	padding-top: 70px;
+
+	p {
+		@include font-face(Open-Sans);
+		font-size:16px;
+		color: $resumeTextColor;
+		font-weight:600;
+	}  
+}

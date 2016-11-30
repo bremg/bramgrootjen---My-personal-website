@@ -1,0 +1,12 @@
+.navbar {
+    margin-bottom: 0;
+    z-index: 15;
+}
+
+.navbar-nav { 
+	li { 
+		a.nav-link{
+			margin: 0;
+		}
+	}
+}
