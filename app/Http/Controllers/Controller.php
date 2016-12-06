@@ -19,11 +19,14 @@ class Controller extends BaseController
 
     public function getIp()
     {
-    	$ip = request()->ip();
+        // During testing return an ip instead of '::1'
+        $ip = request()->ip();
     	if ($ip === "::1") {
     		$ip = "85.144.90.129";
     	}
     	return $ip;
+
+        // uncomment below to filter out own ip and localhost's ip.
         // return request()->ip() != '::1' ? request()->ip() : '85.144.90.129';
     }
 

@@ -7,6 +7,9 @@
   <title>Bram Grootjen</title>
   <meta name="author" content="Bram Grootjen">
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -270,14 +273,20 @@
         </div>
     </section><!-- End Skills Section -->
 
-
-
   </div>
 </div>
 </section>
 
 <!-- Resume  -->
 <section class="hwpanel left-25 page-left" id="resume">
+<div class="resume-experience">
+    <div class="container-fluid">
+      <h4 class="pre">Curriculum Vitae</h4>
+      <p style="color: #373f51">Download mijn CV <a href="/download/resume.pdf">hier</a></p>
+      
+    </div>
+  </div>
+
   <div class="resume-experience">
     <div class="container-fluid">
       <h4 class="pre">Werkervaring</h4>
