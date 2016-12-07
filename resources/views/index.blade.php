@@ -146,7 +146,7 @@
    <div class="row">
     <header class="col-md-6 col-centered">
       <div class="profile-avatar">
-        <img src="images/myuglymug2.gif" alt="My Photo">
+        <img src="images/myuglymug2.png" alt="My Photo">
       </div>
       <h2>
         Bram Grootjen
@@ -420,7 +420,7 @@
    <div class="row">
     <header class="col-md-6 col-centered">
       <div class="profile-avatar">
-        <img src="images/myuglymug2.gif" alt="My Photo">
+        <img src="images/myuglymug2.png" alt="My Photo">
       </div>
       <h2>
         Bram Grootjen
