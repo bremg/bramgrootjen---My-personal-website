@@ -294,7 +294,7 @@
         <li>
           <div class="row">
             <div class="col-sm-6">
-              <strong>2015 - Heden</strong>
+              <strong>2016 - Heden</strong>
             </div>
             <div class="col-sm-6">
               <h4>Software Developer - Code24</h4>
@@ -305,7 +305,7 @@
         <li>
           <div class="row">
             <div class="col-sm-6">
-              <strong>2014 - 2015</strong>
+              <strong>2015</strong>
             </div>
             <div class="col-sm-6">
               <h4>Web developer - Quickwins</h4>
