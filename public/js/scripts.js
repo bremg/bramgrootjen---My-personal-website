@@ -39,6 +39,7 @@
             } else {
                 smallviewport(clickedId, mainMenu, activeSection);
             }
+            
         }
         if (viewport.is("sm")) {
             smallviewport(clickedId, mainMenu, activeSection);
@@ -141,6 +142,7 @@
     function moveLeft(selector) {
         $(selector).addClass('left-0').removeClass('left-25');
     }
+
     function removeAllRight() {
         $('.hwpanel').removeClass('left-50').addClass('left-25');
     }
@@ -215,13 +217,10 @@
                 onStep: function(from, to, percent) {
                     this.el.children[0].innerHTML = Math.round(percent);
                 }
-
             });
             $(this).unbind('inview');
         }
     });
-
-
 
 })(jQuery, ResponsiveBootstrapToolkit);
 

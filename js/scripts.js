@@ -25,6 +25,7 @@ jQuery(function( $ ) {
 		} else {
 			rightSideLinks(clickedId, pageRight, mainMenu);			
 		}
+		
 	});
 
 	function leftSideLinks(clickedId, pageRight, mainMenu){
@@ -52,15 +53,19 @@ jQuery(function( $ ) {
 	function moveRight(selector){
 		$(selector).addClass('left-50').removeClass('left-25');
 	}
+
 	function moveLeft(selector){
 		$(selector).addClass('left-0').removeClass('left-25');
 	}
+
 	function removeAllRight(){
 		$('.hwpanel').removeClass('left-50').addClass('left-25');
 	}
+
 	function removeAllLeft(){
 		$('.hwpanel').removeClass('left-0').addClass('left-25');
 	}
+
 	function moveAndActivate(selector, pageRight){
 		$(selector).addClass('active').removeClass('left-25');
 		if (pageRight === true){
@@ -73,17 +78,12 @@ jQuery(function( $ ) {
 			}, 50);
 		}
 	}
+
 	function menuDefault(menu){
 		$(menu).removeClass('left-50 left0').addClass('left-25');
 	}
 
 	function sectionDefault(section, activesec){ 
-		/*
-			**** the classes var is just for debugging, remove when done debugging
-		*/
-		var classes = $(section).attr("class");
-		console.log(classes + section + activesec);
-
 		if ($(section).hasClass('left-0') && activesec === false){
 			$(section).removeClass('left-0');
 				setTimeout(function(){
@@ -101,6 +101,7 @@ jQuery(function( $ ) {
 					$(section).removeClass('active left-0');
 				}, 1000);	
 		}
-	}    
+	}
+
 });
 
