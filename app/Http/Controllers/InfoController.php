@@ -15,17 +15,6 @@ class InfoController extends Controller
     	foreach($visitors as $visitor){
 
             $visitor->location = json_decode($visitor->location);
-    		// $location = json_decode($visitor->location);
-
-    		// foreach ($location as $k => $v) {
-    		// 	if (!empty($v)){
-    		// 		echo $k . ' : ' . $v . '<br />'; 
-    		// 	}
-    		// }
-
-    		// echo 'Times visited : ' . $visitor->times_visited . '<br/ >' . 'Device : ' . $visitor->device;
-    	}
-        // dd($visitors);
 
         return view('infopanel')->with('visitors', $visitors);
     }

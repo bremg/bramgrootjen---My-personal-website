@@ -56,8 +56,8 @@
         $("head").prepend('<link rel="stylesheet" href="css/bootstrap.min.css">');
       }
 
-    });
-  </script>
+  });
+</script>
 
 </body>
 </html> 

@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::get('/admin', 'AuthenticationController@index');
 
-Route::get('/info-panel', 'InfoController@index')->middleware('admin');
+Route::get('/info-panel', 'InfoController@index')->middleware('Admin');
 
 // Download Route
 Route::get('download/{filename}', function($filename)
@@ -35,3 +35,4 @@ Route::get('download/{filename}', function($filename)
     }
 })
 ->where('filename', '[A-Za-z0-9\-\_\.]+');
+    
