@@ -16,7 +16,7 @@ Auth::routes();
 
 Route::get('/admin', 'AuthenticationController@index');
 
-Route::get('/info-panel', 'InfoController@index')->middleware('Admin');
+Route::get('/info-panel', 'InfoController@index')->middleware('admin');
 
 // Download Route
 Route::get('download/{filename}', function($filename)

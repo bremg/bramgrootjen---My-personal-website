@@ -13,11 +13,9 @@ class InfoController extends Controller
     	$visitors = Visitors::all();
 
     	foreach($visitors as $visitor){
-
             $visitor->location = json_decode($visitor->location);
-
+    	}
+    	
         return view('infopanel')->with('visitors', $visitors);
     }
-
-
 }
